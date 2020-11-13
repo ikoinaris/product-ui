@@ -22,7 +22,7 @@ export class HttpClientService {
   constructor(private httpClient: HttpClient) { }
 
   getProducts() {
-    console.log("Products fetched succesfully!");
-    return this.httpClient.get<Product[]>("http://localhost:8080/products");
+    console.log('Products fetched succesfully!');
+    return this.httpClient.get<Product[]>('http://localhost:8080/products');
   }
 }

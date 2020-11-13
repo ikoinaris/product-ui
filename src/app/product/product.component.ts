@@ -8,6 +8,7 @@ import {HttpClientService, Product} from '../service/http-client.service';
 })
 export class ProductComponent implements OnInit {
 
+  displayedColumns: string[] = ['productId', 'name', 'code', 'title', 'description', 'imageUrl', 'price'];
   products: Product[];
 
   constructor(private httpClientService: HttpClientService) { }
@@ -20,5 +21,4 @@ export class ProductComponent implements OnInit {
   handleSuccessfulResponse(response) {
     this.products = response;
   }
-
 }
